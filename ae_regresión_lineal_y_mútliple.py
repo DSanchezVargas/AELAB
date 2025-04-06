@@ -18,7 +18,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 
 # -----------------------------
-# REGRESIÓN LINEAL SIMPLE
+# EJERCICIO CANVAS 1.0 REGRESIÓN LINEAL SIMPLE
 # -----------------------------
 
 # 1. Generar datos sintéticos
@@ -54,7 +54,7 @@ plt.show()
 
 
 # -----------------------------
-# REGRESIÓN MÚLTIPLE
+# EJERCICIO CANVAS 1.2 REGRESIÓN MÚLTIPLE
 # -----------------------------
 
 # 7. Generar datos múltiples
@@ -102,7 +102,7 @@ boston = fetch_openml(name='boston', version=1, as_frame=True)
 boston_df = boston.data
 boston_df['MEDV'] = boston.target.astype(float)
 
-# --- 1. ANÁLISIS EXPLORATORIO ---
+# --- EJERCICO COLLAB N°1. ANÁLISIS EXPLORATORIO ---
 
 # Gráfico de dispersión entre RM y MEDV
 plt.figure(figsize=(8, 6))
@@ -134,7 +134,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import mean_squared_error
 
-# --- 2. REGRESIÓN LINEAL SIMPLE (Manual) ---
+# --- EJERCICO COLLAB N°2. REGRESIÓN LINEAL SIMPLE (Manual) ---
 X = boston_df[['RM']].values  # Variable independiente (Número medio de habitaciones)
 y = boston_df['MEDV'].values  # Variable dependiente (Precio medio de vivienda)
 X_b = np.c_[np.ones((X.shape[0], 1)), X]  # Agregar columna de unos para el intercepto
@@ -175,7 +175,7 @@ plt.title('Regresión Lineal Simple - Manual')
 plt.legend()
 plt.show()
 
-# --- 3. REGRESIÓN LINEAL SIMPLE (sklearn) ---
+# --- EJERCICO COLLAB N°3. REGRESIÓN LINEAL SIMPLE (sklearn) ---
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
@@ -207,7 +207,7 @@ plt.title('Regresión Lineal Simple - sklearn')
 plt.legend()
 plt.show()
 
-# --- 4. REGRESIÓN LINEAL MÚLTIPLE ---
+# --- EJERCICO COLLAB N°4. REGRESIÓN LINEAL MÚLTIPLE ---
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import numpy as np
